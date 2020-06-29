@@ -1,4 +1,4 @@
-class CreateExercises < ActiveRecord::Migration[6.0]
+class CreateExercises < ActiveRecord::Migration[5.2]
   def change
     create_table :exercises do |t|
       t.integer :workout_id
@@ -6,10 +6,10 @@ class CreateExercises < ActiveRecord::Migration[6.0]
       t.string :exerciseinfo
       t.string :exercisecategroy
       t.string :equipment
-      t.blob :exerciseimage
+      t.string :exerciseimage
       t.string :muscle
-      t.integer :setting-repetitionunit
-      t.integer :setting-weightunit
+      t.integer :setting_repetitionunit
+      t.integer :setting_weightunit
 
       t.timestamps
     end
