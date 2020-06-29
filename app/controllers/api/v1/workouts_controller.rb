@@ -14,11 +14,13 @@ class Api::V1::WorkoutsController < ApplicationController
     end 
 
     def show
-
+        @workout = Workout.find(params[:id]) #refactor
+        render json: @qworkout
     end
 
     def destroy
-
+        @workout = Workout.find(params[:id]) #refactor 
+        @workout.destory
     end
 
     private 
