@@ -4,7 +4,7 @@ class CreateExercises < ActiveRecord::Migration[5.2]
       t.integer :workout_id
       t.string :exercise
       t.string :exerciseinfo
-      t.string :exercisecategroy
+      t.string :exercisecategory
       t.string :equipment
       t.string :exerciseimage
       t.string :muscle
