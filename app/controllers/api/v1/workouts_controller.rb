@@ -15,7 +15,7 @@ class Api::V1::WorkoutsController < ApplicationController
 
     def show
         @workout = Workout.find(params[:id]) #refactor
-        render json: @qworkout
+        render json: @workout
     end
 
     def destroy
