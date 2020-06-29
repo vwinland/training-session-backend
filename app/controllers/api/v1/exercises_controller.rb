@@ -3,7 +3,7 @@ class Api::V1::ExercisesController < ApplicationController
     before_action :set_workout
 
     def index 
-        @workout.exercises
+        @exercises = Exercise.all
         render json: @exercises
     end
 
@@ -18,7 +18,7 @@ class Api::V1::ExercisesController < ApplicationController
      if @exercise.save
         render json: @exercise
      else
-        render json: {error: "Error Saving Exercise"}
+        render json: {error: "Error Saving "}
     end 
 
 
