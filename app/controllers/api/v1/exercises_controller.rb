@@ -7,13 +7,16 @@ class Api::V1::ExercisesController < ApplicationController
         render json: @exercises
     end
 
+   
+    def show
+        @exercise = Exercise.find(params[:id])
+        render json: @exercises
+    end
+
     def create
      
     end 
 
-    def show
-      
-    end
 
     def destroy
        
