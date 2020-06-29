@@ -1,7 +1,7 @@
 Workout (you can have multiple workout plans)
 has_many :exercises
 ##belongs_to :user
-:type -str, :workout - str
+:type -str, :name::- str
 
 Exercise
 belongs to :workout
