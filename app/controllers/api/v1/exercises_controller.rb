@@ -14,7 +14,11 @@ class Api::V1::ExercisesController < ApplicationController
     end
 
     def create
-     
+     @exercise = @workout.exercises.build(exercise_params)
+     if @exercise.save
+        render json: @exercise
+     else
+        render json: {error: "Error Saving Exercise"}
     end 
 
 
