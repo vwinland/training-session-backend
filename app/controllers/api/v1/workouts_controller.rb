@@ -1,11 +1,16 @@
 class Api::V1::WorkoutsController < ApplicationController
 
     def index 
-
+        @workouts = Workout.all 
+        render json: @workouts
     end
 
     def create
-
+        @workout = Workout.new(workout_params)
+        if @workout.save 
+            render json: @account
+        else
+            render json: {error: 'Error Adding Working'}
     end 
 
     def show
