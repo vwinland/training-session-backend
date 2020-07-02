@@ -6,9 +6,10 @@ class Api::V1::WorkoutsController < ApplicationController
     end
 
     def create
+    
         @workout = Workout.new(workout_params)
         if @workout.save 
-            render json: @account
+            render json: @workout
         else
             render json: {error: 'Error Adding Workout'}
         end
@@ -27,7 +28,7 @@ class Api::V1::WorkoutsController < ApplicationController
     private 
 
     def workout_params 
-        params.require(:workout).permit(:name, :category)
+        params.require(:workout).permit(:name, :category )
     end
 end
 
