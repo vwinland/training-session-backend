@@ -24,7 +24,11 @@ class Api::V1::ExercisesController < ApplicationController
 
 
     def destroy
-       
+        @exercise = Exercise.find(params["id"])
+        @workout = Workout.find(exercise.workout_id)
+        exercise.destroy
+        render json: @workout
+
     end
 
     private 
