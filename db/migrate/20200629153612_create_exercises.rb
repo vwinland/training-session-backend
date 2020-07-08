@@ -2,7 +2,7 @@ class CreateExercises < ActiveRecord::Migration[5.2]
   def change
     create_table :exercises do |t|
       t.integer :workout_id
-      t.string :exercise
+      t.string :title
       t.string :exerciseinfo
       t.string :exercisecategory
       t.string :equipment

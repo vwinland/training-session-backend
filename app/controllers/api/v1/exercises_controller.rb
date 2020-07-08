@@ -14,11 +14,12 @@ class Api::V1::ExercisesController < ApplicationController
     end
 
     def create
-     @exercise = @workout.exercises.build(exercise_params)
+     @exercise = @workout.exercises.new(exercise_params)
      if @exercise.save
-        render json: @exercise
+        render json: @workout
      else
         render json: {error: "Error Saving "}
+     end
     end 
 
 
@@ -29,12 +30,12 @@ class Api::V1::ExercisesController < ApplicationController
     private 
 
     def set_workout
-
+        @workout = Workout.find(params[:workout_id])
     end
 
     def exercise_params 
-      
+      params.require(:exercise).permit(:title, :equipment, :workout_id)
     end
-    
+
 
 end
