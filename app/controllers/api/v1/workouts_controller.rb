@@ -25,6 +25,14 @@ class Api::V1::WorkoutsController < ApplicationController
         @workout.destory
     end
 
+    def update 
+        @workout = Workout.find(params[:id])
+        @workout.update(name: params["workout"]["name"])
+        @workout.save 
+        render json: @account
+    end
+
+
     private 
 
     def workout_params 
