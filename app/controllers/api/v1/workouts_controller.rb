@@ -27,7 +27,8 @@ class Api::V1::WorkoutsController < ApplicationController
 
     def update 
         @workout = Workout.find(params[:id])
-        @workout.update(name: params["workout"]["name"])
+        @workout.update(workout_params)
+        
         @workout.save 
         render json: @workout
     end
