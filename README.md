@@ -1,24 +1,25 @@
-# README
+# Training Session
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A web application that stores user submitted workout and exercise data. Users can edit and delete their data. 
 
-Things you may want to cover:
 
-* Ruby version
+## Features
+  - Uses Redux Thunk Middleware to send and recieve data from an API 
+  - Renders JavaScript and HTML (JSX) onto the DOM via React components
+  - Users can add and edit workouts
+  
+ ## Tech Used 
+ - Ruby [2.6.1]
+ - Rails [5.2.3] - MVC framework used as an API 
+ - Postgresql - database 
+  
+ ## Installing 
+ - Clone this repo to local machine ```git clone <backend-repo-url>```.
+ - Run ```bundle install``` to install dependencies. 
+ - Ensure that Postgresql is running. 
+ - Run ```rails db:create``` to create local database.
+ - Run ```rails db:migrate``` to create database tables. 
+ - Run ```rails db:seed``` to create seed data. 
+ - Run ```rails s``` to run server. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  
