@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_08_26_230145) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "calenders", force: :cascade do |t|
     t.integer "workout_id"
     t.integer "day"
